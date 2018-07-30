@@ -31,14 +31,14 @@ body {
 }
 
 #links {
-  background-color: #Febc1f;
+  background-color: grey;
   height: 50px;
   text-align: center;
   border-style: solid;
 }
 
 .link {
-  color: grey;
+  color: #Febc1f;
   display: inline-block;
   font-weight: bold;
   margin-left: 10%;
