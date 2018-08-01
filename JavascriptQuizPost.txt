@@ -1,0 +1,16 @@
+Uriel Cortes
+8/01/18
+
+1.command.log("I will succeed.")
+
+2. let fname = "Uriel"
+   let lname = "Cortes"
+   command.log(lname ", " fname)
+
+3.void swap(int x, int y){
+   int temp = x;
+   x = y;
+   y = temp;
+}
+
+4. 
