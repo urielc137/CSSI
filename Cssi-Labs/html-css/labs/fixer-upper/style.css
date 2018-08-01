@@ -29,6 +29,9 @@ body {
   text-align: center;
   width: 100%;
 }
+.header {
+  font-style: italic;
+}
 
 #links {
   background-color: grey;
@@ -44,4 +47,13 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 2%;
+}
+
+#class {
+  background-color: #FEA51F;
+}
+
+img {
+   border-radius: 70px;
+   
 }
