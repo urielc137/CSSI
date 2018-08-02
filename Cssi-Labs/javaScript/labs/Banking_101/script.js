@@ -14,23 +14,66 @@
 
 let customer_name;
 let balance;
+let password;
+let logged_in;
 
-function openAccount(name){
-  balance = 0;
-  // Set the value for customer_name equal to name below
-
-  return //write the statment you need to return here
+function openAccount(name,pass,startingBalance){
+  if (name === undefined || pass === undefined) {
+    return "You must enter a username and password when opening an account."
+  }
+  else {
+    if (startingBalance != undefined){
+      balance = startingBalance;
+    } else {
+      balance = 0;
+    }
+    customer_name = "Kwite"
+    password = "whoopdiscoop"
+    return customer_name+ " has opened a new account with a balance of " +startingBalance
+  }
 }
 
 function deposit(value){
-  // update the value of balance
-  //return the correct statement
+  if (logged_in != true){
+    return "User must log in."
+  }
+  else {
+    balance += value;
+    return customer_name+ " has deposited " +value+ ". " +customer_name+ "'s total balance is " +balance
+  }
 }
 
-function withdraw(/*argument here*/){
-  //update the value of balance
-  //return the correct statement
+function withdraw(value){
+  if (logged_in != true){
+    return "User must log in."
+  }
+  else {
+    if (balance < value) {
+      return "Sorry " +customer_name+ " , you do not have enough money in your account. You need " +Math.abs(balance - value)+ " more dollars."
+    }
+    else {
+      balance -= value;
+      return customer_name+ " has withdrawn " +value+ ". " +customer_name+ " has " +balance+ " remaining."
+    }
+  }
+}
+function logIn(username, pass){
+  if (username === customer_name && pass === password){
+    logged_in = true;
+    return customer_name+ " has logged in."
+  } else {
+    return "Incorrect log in information."
+  }
 }
 
+function logOut(){
+  logged_in = false;
+  return customer_name+ " has logged out."
+}
 // Write your script below
 console.log("script is running...");
+console.log(openAccount("Kwite", "whoopdiscoop", 300));
+console.log(logIn("Kwite", "whoopdiscoop"));
+console.log(deposit(50));
+console.log(logOut());
+console.log(withdraw(100));
