@@ -54,3 +54,8 @@ body {
 #green {
   background-color: green;
 }
+
+.clear {
+  background-color: white;
+  color: black;
+}
