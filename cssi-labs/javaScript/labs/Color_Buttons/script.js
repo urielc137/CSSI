@@ -23,14 +23,20 @@ let box = document.querySelector('#responseBox');
 // Use addEventListener to respond to a click event.
 redButton.addEventListener('click', (switchcolor0) => {
   console.log("You clicked the red button!");
+  responseBox.style.backgroundColor='red';
+  responseBox.innerHTML="<b>Red</>";
 })
 
 greenButton.addEventListener('click', (switchcolor1) => {
   console.log("You clicked the green button!");
+  responseBox.style.backgroundColor='green';
+  responseBox.innerHTML="<b>Green</>";
 })
 
 blueButton.addEventListener('click', (switchcolor2) => {
   console.log("You clicked the blue button!");
+  responseBox.style.backgroundColor='blue';
+  responseBox.innerHTML="<b>Blue</>";
 })
 
 clearButton.addEventListener('click', (switchcolor3) => {

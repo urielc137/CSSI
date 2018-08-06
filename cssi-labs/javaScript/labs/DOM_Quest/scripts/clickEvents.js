@@ -17,8 +17,8 @@ const colors=['red','pink','orange'];
 let box1 = document.querySelector('#box1');
 let box2 = document.querySelector('#box2');
 let box3 = document.querySelector('#box3');
-let box4 = document.querySelector('#box4');
-let box5 = document.querySelector('#box5');
+//let box4 = document.querySelector('#box4');
+//let box5 = document.querySelector('#box5');
 let rect = document.querySelector('#rect');
 let box6 = document.querySelector('#box6');
 
@@ -44,4 +44,14 @@ function switchcolor2 (){
   box1.style.backgroundColor=colors[2];
   box2.style.backgroundColor=colors[2];
   box3.style.backgroundColor=colors[2];
+}
+
+let box4 = document.getElementsById('.box');
+box.addEventListener('click') e=>{
+  box.classList.toggle("active");
+}
+
+let box5 = document.getElementsById('box5');
+box4.addEventListener('click') e=>{
+  box4.classList.toggle("active");
 }
