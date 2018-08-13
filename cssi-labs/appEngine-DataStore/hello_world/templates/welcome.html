@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome</title>
+  </head>
+  <body>
+    <h1> NYC got Timbs and is located in the {{region_name}} </h1>
+    {{country}} {{region_num}}
+
+    {%if country == 'USA' %}
+      <h1> hello brooklyn </h1>
+    {% endif %}
+    <br/>
+    {%for c in city%}
+      Best city is:{{c}} <br/>
+    {%endfor%}
+    <h2>The region number is {{region_num}}</h2>
+    <img height="300px" width="350px" src="{{url}}" alt="nyc">
+    <h2>Welcome to my New York, which is in the {{country}}</h2>
+    <form action="/showresults" method="POST">
+      First name:<br>
+      <input type="text" name="firstname" value="Mickey">
+      <br>
+      Last name:<br>
+      <input type="text" name="lastname" value="Mouse">
+      <br>
+      Age:<br>
+      <input type="text" name="age" value="18">
+      <br><br>
+      <input type="submit" value="Submit">
+      </form>
+
+  </body>
+</html>
