@@ -14,6 +14,10 @@
     {%for c in city%}
       Best city is:{{c}} <br/>
     {%endfor%}
+    <br/>
+    {%for item in query_result%}
+      {{item.firstname }} is {{item.lastname}} <br/>
+      {%endfor%}
     <h2>The region number is {{region_num}}</h2>
     <img height="300px" width="350px" src="{{url}}" alt="nyc">
     <h2>Welcome to my New York, which is in the {{country}}</h2>
